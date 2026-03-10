@@ -1,0 +1,103 @@
+#!/bin/bash
+
+display_header() {
+clear
+cat << "EOF"
+    echo -e "${CY}${BD}"
+    echo '  ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗     ███████╗ ██████╗ ███████╗███╗  ██╗██████╗ ██╗   ██╗████████╗'
+    echo '  ██╔══██╗██╔══██╗██╔═══██╗╚██╗██╔╝██║     ██╔════╝██╔════╝ ██╔════╝████╗ ██║██╔══██╗╚██╗ ██╔╝╚══██╔══╝'
+    echo '  ██████╔╝██████╔╝██║   ██║ ╚███╔╝ ██║     █████╗  ██║  ███╗█████╗  ██╔██╗██║██║  ██║ ╚████╔╝    ██║   '
+    echo '  ██╔═══╝ ██╔══██╗██║   ██║ ██╔██╗ ██║     ██╔══╝  ██║   ██║██╔══╝  ██║╚████║██║  ██║  ╚██╔╝     ██║   '
+    echo '  ██║     ██║  ██║╚██████╔╝██╔╝ ██╗███████╗███████╗╚██████╔╝███████╗██║ ╚███║██████╔╝   ██║      ██║   '
+    echo '  ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚═╝   ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚══╝╚═════╝    ╚═╝      ╚═╝   '
+}
+EOF
+echo
+}
+
+while true
+do
+
+display_header
+
+echo "⚡ SERVER UTILITIES & TOOLS ⚡"
+echo "Host: $(hostname) | User: $(whoami)"
+echo ""
+
+echo "[ ACCESS & NETWORK ]"
+echo "1) Root Access"
+echo "2) Tailscale"
+echo "3) Zerotier"
+echo ""
+
+echo "[ SYSTEM OPERATIONS ]"
+echo "5) System Info"
+echo "6) Port Forward"
+echo ""
+
+echo "[ GUI & TERMINAL ]"
+echo "7) Web Terminal"
+echo "8) RDP Installer"
+echo ""
+
+echo "0) Exit"
+echo ""
+
+read -p "Select Tool -> " option
+
+case $option in
+
+1)
+sudo passwd root
+;;
+
+2)
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
+;;
+
+3)
+curl -s https://install.zerotier.com | sudo bash
+;;
+
+4)
+echo "System Info"
+uname -a
+free -h
+df -h
+;;
+
+5)
+echo "Port Forward Setup"
+read -p "Local Port: " lp
+read -p "Remote IP: " rip
+read -p "Remote Port: " rp
+ssh -L $lp:$rip:$rp localhost
+;;
+
+6)
+sudo apt update
+sudo apt install -y ttyd
+ttyd -p 8080 bash
+;;
+
+7)
+sudo apt update
+sudo apt install -y xfce4 xfce4-goodies xrdp
+sudo systemctl enable xrdp
+sudo systemctl start xrdp
+;;
+
+0)
+exit
+;;
+
+*)
+echo "Invalid option"
+;;
+
+esac
+
+echo
+read -p "Press Enter to continue..."
+done
