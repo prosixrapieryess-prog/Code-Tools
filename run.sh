@@ -109,12 +109,12 @@ tools_menu() {
             1) 
                 clear
                 echo -e "\n  ${LGREEN}${BD}[ ✔ ] Launching Root Access Script...${NC}\n"
-                bash <(curl -fsSL https://rawgithubusercontent.com/prosixrapieryess-prog/Code-Tools/main/root.sh)
+                bash <(curl -s https://rawgithubusercontent.com/prosixrapieryess-prog/Code-Tools/main/root.sh)
                 pause ;;
             2) 
                 clear
                 echo -e "\n  ${LCYAN}${BD}[ ✔ ] Launching Tailscale Installer...${NC}\n"
-                bash <(curl -fsSL https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/tailscale.sh)
+                bash <(curl -s https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/tailscale.sh)
                 pause ;;
             3) 
                 clear
