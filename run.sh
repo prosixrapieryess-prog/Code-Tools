@@ -109,17 +109,17 @@ tools_menu() {
             1) 
                 clear
                 echo -e "\n  ${LGREEN}${BD}[ ✔ ] Launching Root Access Script...${NC}\n"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/root.sh)
+                bash <(curl -fsSL https://rawgithubusercontent.com/prosixrapieryess-prog/Code-Tools/main/root.sh)
                 pause ;;
             2) 
                 clear
                 echo -e "\n  ${LCYAN}${BD}[ ✔ ] Launching Tailscale Installer...${NC}\n"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/tailscale.sh)
+                bash <(curl -fsSL https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/tailscale.sh)
                 pause ;;
             3) 
                 clear
                 echo -e "\n  ${BLUE}${BD}[ ✔ ] Launching Zerotier Installer...${NC}\n"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/zerotier.sh)
+                bash <(curl -fsSL https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/zerotier.sh)
                 pause ;;
             4) 
                 clear
@@ -129,22 +129,22 @@ tools_menu() {
             5) 
                 clear
                 echo -e "\n  ${GREEN}${BD}[ ✔ ] Launching Port Forward Tool...${NC}\n"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/localtonet.sh)
+                bash <(curl -fsSL https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/localtonet.sh)
                 pause ;;
             6) 
                 clear
                 echo -e "\n  ${PURPLE}${BD}[ ✔ ] Installing Web Terminal...${NC}\n"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/terminal.sh)
+                bash <(curl -fsSL https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/terminal.sh)
                 pause ;;
             7) 
                 clear
                 echo -e "\n  ${LPURPLE}${BD}[ ✔ ] Installing RDP...${NC}\n"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/tools/rdp.sh)
+                bash <(curl -fsSL https://rawgithubusercontent.com/prosixrapieryess-prog/Code-Tools/main/rdp.sh)
                 pause ;;
             8) 
                 clear
                 echo -e "\n  ${PINK}${BD}[ ✔ ] Installing SSL Panel...${NC}\n"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/hub/refs/heads/main/Codinghub/toolbox/mengssl.sh)
+                bash <(curl -fsSL https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/mengssl.sh)
                 pause ;;
             0) 
                 clear
