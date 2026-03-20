@@ -124,7 +124,7 @@ tools_menu() {
             4) 
                 clear
                 echo -e "\n  ${YELLOW}${BD}[ ✔ ] Fetching System Info...${NC}\n"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/info.sh)
+                bash <(curl -fsSL https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/info.sh)
                 pause ;;
             5) 
                 clear
