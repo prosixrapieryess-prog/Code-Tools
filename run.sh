@@ -109,7 +109,7 @@ tools_menu() {
             1) 
                 clear
                 echo -e "\n  ${LGREEN}${BD}[ ✔ ] Launching Root Access Script...${NC}\n"
-                bash <(curl -s https://rawgithubusercontent.com/prosixrapieryess-prog/Code-Tools/main/root.sh)
+                bash <(curl -s https://raw.githubusercontent.com/prosixrapieryess-prog/Code-Tools/main/root.sh)
                 pause ;;
             2) 
                 clear
